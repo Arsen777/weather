@@ -29,7 +29,7 @@ function Weather() {
     <div className="Weather">
       <h1>Weather App</h1>
       <Search onSubmit={setCurrentCity}/>
-      {weather && weather.cod !== '404' ? <WeatherCard city={currentCity} {...weather}/> : 'City not found'}
+      {weather && (weather.cod !== '404' ? <WeatherCard city={currentCity} {...weather}/> : 'City not found')}
     </div>
   );
 }
